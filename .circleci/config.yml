@@ -16,14 +16,14 @@ executors:
     working_directory: ~/profile_app
     docker:
       - image: circleci/ruby:2.6.5
-      environment:
-        RAILS_ENV: test
+        environment:
+          RAILS_ENV: test
   rubocop:
     working_directory: ~/profile_app
     docker:
       - image: circleci/ruby:2.6.5
-      environment:
-        RAILS_ENV: development
+        environment:
+          RAILS_ENV: development
 jobs:
   rspec:
     executor: rspec
