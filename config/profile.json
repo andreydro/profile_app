@@ -1,14 +1,14 @@
 {
-  "location": "",
-  "email": "",
-  "goal": "",
-  "programming_languages": "",
-  "current_job": "",
-  "laptop": "",
-  "english": "",
-  "education": "",
-  "phone_number": "",
-  "age": 0,
-  "past_job_experience": "",
-  "url_to_repo": ""
+  "location": "Minsk",
+  "email": "andreydro14@gmail.com",
+  "goal": "Learn how to use DevOps tools",
+  "programming_languages": "Ruby, bash, JS",
+  "current_job": "Ruby Developer",
+  "laptop": "yes",
+  "english": "b2",
+  "education": "Bachelor Degree in Economics (Herzen University, Saint Petersburg) ",
+  "phone_number": "+375293554388",
+  "age": 27,
+  "past_job_experience": "2 years in software engineering",
+  "url_to_repo": "https://github.com/andreydro/profile_app"
 }
