@@ -1,8 +1,5 @@
 version: 2.0
 
-# orbs:
-#   ruby: circleci/ruby@0.1.2 # Ruby orb registry: https://circleci.com/orbs/registry/orb/circleci/ruby
-
 workflows:
   version: 2
   test:
@@ -40,3 +37,13 @@ jobs:
       - type: shell
         command: |
           bundle exec rubocop
+
+  deploy:
+    working_directory: ~/profile_app
+    docker:
+      - image: circleci/ruby:2.6.0
+    steps:
+      - checkout
+      - type: shell
+          command: |
+            git push https://heroku:31bef4bb-ce5d-4ae8-936a-be40f9cae50c@git.heroku.com/profile-app-dro.git master
