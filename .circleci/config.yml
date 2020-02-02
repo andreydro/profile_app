@@ -5,10 +5,10 @@ workflows:
   test:
     jobs:
       - rspec
-      - rubocop
+      - rubocop:
           requires:
             - rspec
-      - deploy
+      - deploy:
           requires:
             - rubocops
 
