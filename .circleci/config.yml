@@ -8,9 +8,7 @@ workflows:
   test:
     jobs:
       - rspec
-      - rubocop:
-        requires:
-          - rspec
+      - rubocop
 
 jobs:
   rspec:
@@ -29,6 +27,7 @@ jobs:
                             --out rspec.xml \
                             --format progress \
                             $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
+
   rubocop:
     working_directory: ~/profile_app
     docker:
