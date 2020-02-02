@@ -8,6 +8,9 @@ workflows:
   test:
     jobs:
       - rspec
+      - rubocop:
+        requires:
+          - rspec
 
 jobs:
   rspec:
@@ -26,3 +29,15 @@ jobs:
                             --out rspec.xml \
                             --format progress \
                             $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
+  rubocop:
+    working_directory: ~/profile_app
+    docker:
+      - image: circleci/ruby:2.6.0
+    steps:
+      - checkout
+      - run: sudo gem update --system
+      - run: sudo gem install bundler -v 2.1.2
+      - run: bundle install --path vendor/bundle
+      - type: shell
+        command: |
+          bundle exec rubocop
