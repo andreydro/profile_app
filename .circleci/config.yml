@@ -13,14 +13,11 @@ jobs:
   rspec:
     working_directory: ~/profile_app
     docker:
-      - image: circleci/ruby:2.5.1
+      - image: circleci/ruby:2.6.0
     steps:
       - checkout
-      - run:
-          name: install dependencies
-          command: |
-          sudo gem update --system
-          sudo gem install bundler -v 2.1.2
+      - run: sudo gem update --system
+      - run: sudo gem install bundler -v 2.1.2
       - run: bundle install --path vendor/bundle
       - type: shell
         command: |
