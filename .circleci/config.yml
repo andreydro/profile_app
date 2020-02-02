@@ -6,6 +6,7 @@ workflows:
     jobs:
       - rspec
       - rubocop
+      - deploy
 
 jobs:
   rspec:
