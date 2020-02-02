@@ -4,6 +4,7 @@ require 'sinatra'
 require_relative 'lib/profile_config_schema.rb'
 
 set :show_exceptions, false
+
 set :protection, except: [:json_csrf]
 
 PROFILE_PATH = 'config/profile.json'
