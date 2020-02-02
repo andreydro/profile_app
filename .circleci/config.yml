@@ -16,8 +16,11 @@ jobs:
       - image: circleci/ruby:2.5.1
     steps:
       - checkout
-      - run: sudo gem update --system
-      - run: sudo gem install bundler -v 2.1.2
+      - run:
+          name: install dependencies
+          comman: |
+          sudo gem update --system
+          sudo gem install bundler -v 2.1.2
       - run: bundle install --path vendor/bundle
       - type: shell
         command: |
