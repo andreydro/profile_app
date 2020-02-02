@@ -45,5 +45,5 @@ jobs:
     steps:
       - checkout
       - type: shell
-          command: |
-            git push https://heroku:31bef4bb-ce5d-4ae8-936a-be40f9cae50c@git.heroku.com/profile-app-dro.git master
+        command: |
+          git push https://heroku:31bef4bb-ce5d-4ae8-936a-be40f9cae50c@git.heroku.com/profile-app-dro.git master
