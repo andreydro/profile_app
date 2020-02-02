@@ -17,7 +17,7 @@ jobs:
     steps:
       - run: sudo gem update --system
       - run: sudo gem install bundler -v 2.1.2
-      - run: bundle install
+      - run: bundle exec bundle install
       - type: shell
         command: |
           bundle exec rspec --profile 10 \
